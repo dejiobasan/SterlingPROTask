@@ -3,6 +3,7 @@ import Homepage from "./Pages/HomePage";
 import LoginPage from "./Pages/LoginPage";
 import Navbar from "./Components/Navbar";
 import { useUserStore } from "./Stores/useUserStore";
+import CreateProductForm from "./Pages/createProductPage";
 
 function App() {
   const { user } = useUserStore();
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={!user ? <LoginPage /> : <Navigate to="/" />} />
+          <Route path="/create-product" element={!user ? <CreateProductForm /> : <Navigate to="/" />} />
         </Routes>
       </div>
     </div>

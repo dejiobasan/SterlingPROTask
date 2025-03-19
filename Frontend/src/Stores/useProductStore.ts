@@ -3,7 +3,7 @@ import axios from "../lib/axios";
 import { toast } from "react-hot-toast";
 
 interface Product {
-  ProductId: string;
+  ProductId: number;
   Name: string;
   Description: string;
   Price: number;

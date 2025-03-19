@@ -3,7 +3,7 @@ import axios from "../lib/axios";
 import { toast } from "react-hot-toast";
 
 interface User {
-  UserId: string;
+  UserId: number;
   Username: string;
 }
 
@@ -17,7 +17,7 @@ interface RegisterResponse {
   success: boolean;
   message: string;
   User: {
-    UserId: string;
+    UserId: number;
     Username: string;
   };
 }
@@ -32,7 +32,7 @@ interface LoginResponse {
   message: string;
   Token: string;
   User: {
-    UserId: string;
+    UserId: number;
     Username: string;
   };
 }
